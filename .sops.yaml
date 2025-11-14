@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: mysql-secret\.enc\.yaml
+    age: ["age1examplepublickeyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"]

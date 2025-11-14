@@ -1,0 +1,23 @@
+{
+  "title": "WordPress Logs",
+  "uid": "wordpress-logs",
+  "schemaVersion": 36,
+  "version": 1,
+  "panels": [
+    {
+      "id": 1,
+      "type": "logs",
+      "title": "WordPress Pod Logs",
+      "datasource": {
+        "type": "loki",
+        "uid": "loki"
+      },
+      "targets": [
+        {
+          "expr": "{namespace=\"wordpress\"}",
+          "refId": "A"
+        }
+      ]
+    }
+  ]
+}

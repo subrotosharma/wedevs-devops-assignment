@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ingress-custom-lua-plugins
+  namespace: ingress-nginx
+data:
+  redirect_404.lua: |
+    return function()
+      local status = ngx.status or ngx.var.status
+      if tonumber(status) == 404 then
+        return ngx.redirect("https://google.com", 302)
+      end
+    end
